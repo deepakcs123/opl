@@ -1,0 +1,40 @@
+<form class="example-form" (ngSubmit)="doSubmitForm()">
+    {{AllData|json}}
+<mat-card class="example-card">
+    <div class="container">
+
+        <mat-card-title>Registration Form</mat-card-title>
+        <mat-card-subtitle>Kindly fill the form carefully</mat-card-subtitle>
+        <mat-card-content>
+
+                <mat-form-field class="example-full-width" appearance="outline" >
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="Enter Name" name="fullName" [(ngModel)]="AllData.fullName" >
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Email ID</mat-label>
+                    <input type="email" matInput placeholder="Email ID" name="emailId" [(ngModel)]="AllData.emailId">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" type="password" name="password" [(ngModel)]="AllData.password">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>DOB</mat-label>
+                    <input matInput placeholder="Date of Birth" type="date" name="dob" [(ngModel)]="AllData.dob">
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput placeholder="Postal Address" name="address" [(ngModel)]="AllData.address"></textarea>
+                </mat-form-field>
+                <mat-card-actions>
+                    <button type="submit" mat-raised-button color="primary">Register</button>  |<a routerLink="/" mat-raised-button color="warn">Home</a>
+                </mat-card-actions>
+          
+        </mat-card-content>
+    </div>
+
+</mat-card>
+</form>
+         
